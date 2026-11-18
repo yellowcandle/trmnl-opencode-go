@@ -112,6 +112,29 @@ def normalize_meter(key: str, label: str, meter: dict[str, Any] | None) -> dict[
         "status": status,
     }
 
+def compute_weekly_forecast(weekly: dict[str, Any] | None) -> tuple[float | None, str | None, str | None]:
+    if not isinstance(weekly, dict) or weekly.get("percent") is None or not weekly.get("resets_at_ms"):
+        return None, None, None
+    pct = float(weekly["percent"])
+    now_s = datetime.now(timezone.utc).timestamp()
+    rem_s = max(0.0, float(weekly["resets_at_ms"]) / 1000.0 - now_s)
+    week_s = 7.0 * 86400.0
+    elapsed_s = max(60.0, week_s - rem_s)
+    elapsed_pct = (elapsed_s / week_s) * 100.0
+    pace = round(pct / elapsed_pct, 1) if elapsed_pct > 0 else 0.0
+    pace_label = f"{pace:.1f}x"
+    if pct <= 0 or pace <= 1.0:
+        return pace, pace_label, "Within weekly budget — no exhaustion projected before reset."
+    secs_to_100 = elapsed_s * (100.0 / pct)
+    secs_left = secs_to_100 - elapsed_s
+    if secs_left < rem_s:
+        from datetime import timedelta
+        ex_dt = datetime.now(timezone.utc) + timedelta(seconds=secs_left)
+        hrs_before = max(1, round((rem_s - secs_left) / 3600.0))
+        return pace, pace_label, f"At this pace the weekly window is exhausted {ex_dt.strftime('%a %H:%M')} UTC, {hrs_before}h before reset."
+    return pace, pace_label, "Current pace stays within the weekly window before reset."
+
+
 
 def build_payload(data: dict[str, Any] | None, source: str | None = None, error: str | None = None) -> dict[str, Any]:
     workspace = {}
@@ -141,6 +164,10 @@ def build_payload(data: dict[str, Any] | None, source: str | None = None, error:
                 "any_limited": any(w.get("limited") for w in windows),
                 "max_percent": max((w.get("percent") or 0) for w in windows),
             }
+            pace, pace_label, forecast = compute_weekly_forecast(windows[1])
+            go["pace"] = pace
+            go["pace_label"] = pace_label
+            go["forecast"] = forecast
         else:
             go = {"available": False, "windows": [], "rolling": None, "weekly": None, "monthly": None}
         b = data.get("budgets")

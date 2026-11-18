@@ -1,104 +1,129 @@
-<div class="layout layout--col gap--space-between">
+<div class="layout layout--col gap--distribute">
   {% if go and go.available %}
-      {% comment %} Weekly hero {% endcomment %}
-      <div class="flex flex--row flex--between w--full">
-        <div class="flex flex--col">
-          <span class="label">WEEKLY WINDOW</span>
-          <div class="flex flex--row flex--center-y gap--small">
-            <span class="value value--large value--tnums">{{ go.weekly.percent | default: 0 | round: 0 }}</span>
-            <div class="flex flex--col">
-              <span class="value value--small">%</span>
-              <span class="label">USED</span>
+    {% comment %} Header {% endcomment %}
+    <div class="flex flex--col gap--small w--full">
+      <div class="flex flex--row flex--between flex--center-y w--full">
+        <div class="flex flex--row flex--center-y gap--small">
+          <div class="w--3 h--3 bg--black"></div>
+          <span class="title title--small text--bold">OPENCODE GO</span>
+          <span class="label label--small label--gray 1bit:text--black">/</span>
+          <span class="label label--small">RATE LIMITS</span>
+        </div>
+        <div class="flex flex--row flex--center-y gap--xsmall">
+          <div class="w--2 h--2 rounded--full bg--black"></div>
+          <span class="label label--small">LIVE · {{ updated_at | default: "SYNCED" | slice: 0, 16 | replace: "T", " " }}Z</span>
+        </div>
+      </div>
+      <div class="w--full h--0.5 bg--black"></div>
+    </div>
+
+    {% comment %} Hero Weekly {% endcomment %}
+    {% assign w_pct = go.weekly.percent | default: 0 %}
+    {% assign w_ticks = w_pct | times: 44 | divided_by: 100 | round: 0 %}
+    <div class="flex flex--col gap--small w--full">
+      <div class="flex flex--row flex--between flex--bottom w--full">
+        <div class="flex flex--col flex--left">
+          <span class="label label--small">WEEKLY WINDOW</span>
+          <div class="flex flex--row flex--bottom gap--xsmall">
+            <span class="value value--xxlarge value--tnums">{{ w_pct | round: 0 }}</span>
+            <div class="flex flex--col pb--1">
+              <span class="value value--small text--bold">%</span>
+              <span class="label label--small">USED</span>
             </div>
           </div>
         </div>
-        <div class="flex flex--col gap--small">
-          <div class="flex flex--col">
+        <div class="flex flex--col flex--right gap--small">
+          <div class="flex flex--col flex--right">
             <span class="label label--small">REMAINING</span>
-            <span class="value value--small value--tnums">{{ go.weekly.remaining_percent | default: 0 | round: 1 }}%</span>
+            <span class="value value--xsmall value--tnums">{{ go.weekly.remaining_percent | default: 0 | round: 1 }}%</span>
           </div>
-          <div class="flex flex--col">
+          <div class="flex flex--col flex--right">
             <span class="label label--small">RESETS IN</span>
-            <span class="value value--small value--tnums">{{ go.weekly.resets_in | default: "—" }}</span>
+            <span class="value value--xsmall value--tnums">{{ go.weekly.resets_in | default: "—" }}</span>
           </div>
         </div>
       </div>
 
-      {% comment %} Weekly window bar {% endcomment %}
-      <div class="progress-bar w--full">
-        <div class="track">
-          <div class="fill" style="width: {{ go.weekly.percent | default: 0 }}%"></div>
-        </div>
+      <div class="flex flex--row gap--[3px] w--full h--10">
+        {% for i in (1..44) %}
+          <div class="grow h--full {% if i <= w_ticks %}bg--black{% else %}bg--gray-55{% endif %}"></div>
+        {% endfor %}
       </div>
+
       <div class="flex flex--row flex--between w--full">
         <span class="label label--small">0</span>
-        <span class="label label--small label--underline">weekly {{ go.weekly.percent | default: 0 | round: 0 }}% · {{ go.weekly.percent | default: 0 | times: 0.44 | round: 0 }} of 44 units</span>
+        <span class="label label--small">weekly {{ w_pct | round: 0 }}% · {{ w_ticks }} of 44 units</span>
         <span class="label label--small">100</span>
       </div>
+    </div>
 
-      <div class="border border--h border--h-10"></div>
+    <div class="divider w--full"></div>
 
-      {% comment %} Secondary windows {% endcomment %}
-      <div class="flex flex--row gap--regular w--full">
-        <div class="flex flex--col flex--1 gap--small">
-          <div class="flex flex--row flex--between flex--center-y">
-            <span class="label label--small">5-HOUR</span>
-            <span class="value value--small value--tnums">{{ go.rolling.percent | default: 0 | round: 0 }}%</span>
-          </div>
-          <div class="progress-bar progress-bar--xsmall w--full">
-            <div class="track"><div class="fill" style="width: {{ go.rolling.percent | default: 0 }}%"></div></div>
-          </div>
-          <div class="flex flex--row flex--between">
-            <span class="label label--small">{{ go.rolling.remaining_percent | default: 0 | round: 0 }}% left</span>
-            <span class="label label--small">resets {{ go.rolling.resets_in | default: "—" }}</span>
-          </div>
+    {% comment %} Secondary Windows: 5-HOUR + MONTHLY {% endcomment %}
+    {% assign r_pct = go.rolling.percent | default: 0 %}
+    {% assign r_ticks = r_pct | times: 26 | divided_by: 100 | round: 0 %}
+    {% assign m_pct = go.monthly.percent | default: 0 %}
+    {% assign m_ticks = m_pct | times: 26 | divided_by: 100 | round: 0 %}
+    <div class="grid grid--cols-2 gap--large w--full">
+      <div class="flex flex--col gap--xsmall w--full">
+        <div class="flex flex--row flex--between flex--bottom w--full">
+          <span class="label label--small">5-HOUR</span>
+          <span class="value value--small value--tnums">{{ r_pct | round: 0 }}%</span>
         </div>
-        <div class="border border--v border--h-10"></div>
-        <div class="flex flex--col flex--1 gap--small">
-          <div class="flex flex--row flex--between flex--center-y">
-            <span class="label label--small">MONTHLY</span>
-            <span class="value value--small value--tnums">{{ go.monthly.percent | default: 0 | round: 0 }}%</span>
-          </div>
-          <div class="progress-bar progress-bar--xsmall w--full">
-            <div class="track"><div class="fill" style="width: {{ go.monthly.percent | default: 0 }}%"></div></div>
-          </div>
-          <div class="flex flex--row flex--between">
-            <span class="label label--small">{{ go.monthly.remaining_percent | default: 0 | round: 0 }}% left</span>
-            <span class="label label--small">resets {{ go.monthly.resets_in | default: "—" }}</span>
-          </div>
+        <div class="flex flex--row gap--[2px] w--full h--3">
+          {% for i in (1..26) %}
+            <div class="grow h--full {% if i <= r_ticks %}bg--black{% else %}bg--gray-55{% endif %}"></div>
+          {% endfor %}
+        </div>
+        <div class="flex flex--row flex--between w--full">
+          <span class="label label--small">{{ go.rolling.remaining_percent | default: 0 | round: 0 }}% left</span>
+          <span class="label label--small">resets {{ go.rolling.resets_in | default: "—" }}</span>
         </div>
       </div>
 
-      {% comment %} Forecast note {% endcomment %}
-      <div class="item item--inverse bg--black">
-        <div class="content w--full">
-          <div class="flex flex--row flex--between flex--center-y w--full">
-            <div class="flex flex--col gap--xsmall">
-              <span class="label label--small text--white">FORECAST</span>
-              <span class="description text--white">Weekly is binding · tightest window governs headroom</span>
-            </div>
-            <span class="label label--small text--white">{{ go.max_percent | default: 0 | round: 0 }}% peak</span>
-          </div>
+      <div class="flex flex--col gap--xsmall w--full">
+        <div class="flex flex--row flex--between flex--bottom w--full">
+          <span class="label label--small">MONTHLY</span>
+          <span class="value value--small value--tnums">{{ m_pct | round: 0 }}%</span>
+        </div>
+        <div class="flex flex--row gap--[2px] w--full h--3">
+          {% for i in (1..26) %}
+            <div class="grow h--full {% if i <= m_ticks %}bg--black{% else %}bg--gray-55{% endif %}"></div>
+          {% endfor %}
+        </div>
+        <div class="flex flex--row flex--between w--full">
+          <span class="label label--small">{{ go.monthly.remaining_percent | default: 0 | round: 0 }}% left</span>
+          <span class="label label--small">resets {{ go.monthly.resets_in | default: "—" }}</span>
         </div>
       </div>
+    </div>
 
-      {% if error %}
-        <div class="item item--emphasis-2">
-          <div class="content">
-            <span class="label label--small label--underline">Sync note</span>
-            <span class="description" data-clamp="2">{{ error }}</span>
-          </div>
+    {% comment %} Forecast Band {% endcomment %}
+    <div class="bg--black px--5 py--3 w--full">
+      <div class="flex flex--row flex--between flex--center-y gap--large w--full">
+        <div class="flex flex--col flex--left grow gap--xsmall">
+          <span class="label label--small text--white">FORECAST</span>
+          <span class="description text--white" data-clamp="2">{{ go.forecast | default: "Weekly window is within budget." }}</span>
         </div>
-      {% endif %}
-    {% else %}
-      <div class="flex flex--col flex--center-y flex--center-x h--full gap--small">
-        <span class="title">OpenCode Go</span>
-        <span class="description" data-clamp="4">{{ error | default: "Quota unavailable. Sign in to OpenCode Console and run scripts/sync.py." }}</span>
+        <div class="flex flex--col flex--right shrink-0">
+          <span class="label label--small text--white">PACE</span>
+          <span class="value value--base value--tnums text--white">{{ go.pace_label | default: "—" }}</span>
+        </div>
       </div>
-    {% endif %}
-  </div>
-  <div class="title_bar">
-    <span class="title">OPENCODE GO</span>
-    <span class="instance">{{ workspace.name | default: "Quota" }}{% if updated_at %} · {{ updated_at }}{% endif %}</span>
-  </div>
+    </div>
+
+    {% comment %} Footer {% endcomment %}
+    <div class="flex flex--col gap--xsmall w--full">
+      <div class="divider w--full"></div>
+      <div class="flex flex--row flex--between w--full">
+        <span class="label label--small">SOURCE OPENCODE.CC/GO</span>
+        <span class="label label--small">TRMNL OG · 800×480 · SYNC VIA WEBHOOK</span>
+      </div>
+    </div>
+  {% else %}
+    <div class="flex flex--col flex--center-y flex--center-x h--full gap--small">
+      <span class="title">OPENCODE GO</span>
+      <span class="description" data-clamp="4">{{ error | default: "Quota unavailable. Sign in to OpenCode Console and run scripts/sync.py." }}</span>
+    </div>
+  {% endif %}
 </div>
