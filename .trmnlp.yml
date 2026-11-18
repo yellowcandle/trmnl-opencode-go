@@ -1,0 +1,76 @@
+# Local trmnlp dev config (not uploaded to TRMNL)
+watch:
+  - .trmnlp.yml
+  - src
+
+# Our webhook plugin has no serverless transform; data arrives pre-shaped by scripts/sync.py.
+transform_runtime: no
+
+# Preview/build merge variables (mirror scripts/sync.py output shape)
+variables:
+  workspace:
+    id: wrk_01K55EYW82NC38XNVAA3A70ESA
+    name: Default
+    usage_url: https://opencode.ai/console/wrk_01K55EYW82NC38XNVAA3A70ESA/activity/overview
+  go:
+    available: true
+    any_limited: false
+    max_percent: 64.0
+    rolling:
+      key: rolling
+      label: 5 hour
+      percent: 0.0
+      remaining_percent: 100.0
+      limited: false
+      resets_at: 2026-11-18T05:45:45Z
+      resets_in: 3h 38m
+      status: ok
+    weekly:
+      key: weekly
+      label: Weekly
+      percent: 45.0
+      remaining_percent: 55.0
+      limited: false
+      resets_at: 2026-11-23T00:00:00Z
+      resets_in: 4d 21h
+      status: ok
+    monthly:
+      key: monthly
+      label: Monthly
+      percent: 64.0
+      remaining_percent: 36.0
+      limited: false
+      resets_at: 2026-12-12T07:50:47Z
+      resets_in: 24d 5h
+      status: ok
+    windows:
+      - key: rolling
+        label: 5 hour
+        percent: 0.0
+        remaining_percent: 100.0
+        limited: false
+        resets_at: 2026-11-18T05:45:45Z
+        resets_in: 3h 38m
+        status: ok
+      - key: weekly
+        label: Weekly
+        percent: 45.0
+        remaining_percent: 55.0
+        limited: false
+        resets_at: 2026-11-23T00:00:00Z
+        resets_in: 4d 21h
+        status: ok
+      - key: monthly
+        label: Monthly
+        percent: 64.0
+        remaining_percent: 36.0
+        limited: false
+        resets_at: 2026-12-12T07:50:47Z
+        resets_in: 24d 5h
+        status: ok
+  budgets: []
+  updated_at: 2026-11-18T02:07:26Z
+  source: opencode-api
+  status: ok
+  error: null
+  trmnl: {}

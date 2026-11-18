@@ -1,0 +1,25 @@
+<div class="layout layout--col gap--xsmall">
+  {% if go and go.available %}
+    <div class="flex flex--col gap--xsmall w--full">
+      {% for meter in go.windows limit: 3 %}
+        <div class="flex flex--col w--full">
+          <div class="flex flex--row flex--between">
+            <span class="label label--small">{{ meter.label }}</span>
+            <span class="label label--small label--underline">{% if meter.percent != nil %}{{ meter.percent | round: 0 }}%{% else %}—{% endif %}</span>
+          </div>
+          <div class="progress-bar progress-bar--xsmall w--full">
+            <div class="track"><div class="fill" style="width: {{ meter.percent | default: 0 }}%"></div></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <span class="label label--small" data-clamp="1">{% if updated_at %}{{ updated_at }}{% endif %}</span>
+  {% else %}
+    <span class="title title--small">Go Quota</span>
+    <span class="label label--small" data-clamp="3">{{ error | default: "Unavailable" }}</span>
+  {% endif %}
+</div>
+<div class="title_bar">
+  <span class="title">Go</span>
+  <span class="instance">{{ workspace.name | default: "Quota" }}</span>
+</div>

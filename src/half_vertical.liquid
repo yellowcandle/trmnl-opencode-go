@@ -1,0 +1,18 @@
+<div class="layout layout--col gap--small">
+  {% if go and go.available %}
+    <div class="flex flex--col gap--small w--full" data-overflow="true">
+      {% for meter in go.windows %}
+        {% render "ocg_meter", meter: meter, compact: true %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="flex flex--col flex--center-y h--full">
+      <span class="title title--small">OpenCode Go</span>
+      <span class="description" data-clamp="4">{{ error | default: "Quota unavailable" }}</span>
+    </div>
+  {% endif %}
+</div>
+<div class="title_bar">
+  <span class="title">Go Quota</span>
+  <span class="instance">{{ workspace.name | default: "Console" }}</span>
+</div>

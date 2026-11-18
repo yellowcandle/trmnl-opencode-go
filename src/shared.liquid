@@ -1,0 +1,39 @@
+{% comment %}
+  Shared markup for OpenCode Go quota TRMNL plugin.
+  Expects merge_variables from scripts/sync.py:
+    workspace.name, workspace.usage_url
+    go.available, go.windows / go.rolling / go.weekly / go.monthly
+      each: label, percent, remaining_percent, limited, resets_at, resets_in, status
+    budgets[]
+    updated_at, status, error
+{% endcomment %}
+
+{% assign go_ok = go.available %}
+
+{% comment %} Meter partial for half/quad views; full uses inline hero {% endcomment %}
+{% template ocg_meter %}
+<div class="item {% if meter.limited %}item--emphasis-3{% elsif meter.percent and meter.percent >= 80 %}item--emphasis-2{% endif %}">
+  <div class="meta"></div>
+  <div class="content w--full">
+    <div class="flex flex--row flex--between flex--center-y w--full">
+      <span class="title title--small">{{ meter.label }}</span>
+      <span class="value value--xxsmall value--tnums">
+        {% if meter.percent != nil %}{{ meter.percent | round: 1 }}% used{% else %}—{% endif %}
+      </span>
+    </div>
+    <div class="progress-bar {% if compact %}progress-bar--small{% endif %} w--full">
+      <div class="track">
+        <div class="fill" style="width: {{ meter.percent | default: 0 }}%"></div>
+      </div>
+    </div>
+    <div class="flex flex--row flex--between w--full">
+      <span class="label label--small label--underline">
+        {% if meter.limited %}Limited{% elsif meter.remaining_percent != nil %}{{ meter.remaining_percent | round: 1 }}% left{% else %}Unknown{% endif %}
+      </span>
+      <span class="label label--small">
+        {% if meter.resets_in %}resets in {{ meter.resets_in }}{% elsif meter.resets_at %}resets {{ meter.resets_at }}{% endif %}
+      </span>
+    </div>
+  </div>
+</div>
+{% endtemplate %}

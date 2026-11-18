@@ -1,0 +1,29 @@
+---
+strategy: webhook
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: ''
+polling_verb: get
+framework_version: 3.4.6
+serverless_language: ''
+refresh_interval_floor: ''
+polling_url: ''
+polling_headers:
+polling_body:
+id: 544538
+oauth_enabled: 'false'
+oauth_pkce_enabled: 'no'
+custom_fields:
+- keyname: author_bio
+  field_type: author_bio
+  name: About
+  description: Plugin author contact
+  learn_more_url: https://github.com/yellowcandle/trmnl-opencode-go
+- keyname: webhook_url
+  field_type: copyable_webhook_url
+  name: Webhook URL
+  description: Push quota data from scripts/sync.py
+  help_text: Copy this URL and run `python3 scripts/sync.py` with TRMNL_WEBHOOK_URL set to it.
+name: OpenCode Go Quota
+description: OpenCode Go quota meters
+refresh_interval:

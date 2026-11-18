@@ -1,0 +1,1411 @@
+{
+  "version": "2.22",
+  "children": [
+    {
+      "type": "frame",
+      "id": "pVoVC",
+      "x": -440,
+      "y": 420,
+      "name": "★ SELECTED — 1. Weekly hero quota",
+      "clip": true,
+      "width": 800,
+      "height": 480,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 10,
+      "padding": 22,
+      "children": [
+        {
+          "type": "frame",
+          "id": "V8WDC",
+          "name": "Header",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "GIxIk",
+              "name": "Brand",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "MJfXn",
+                  "name": "Mark",
+                  "fill": "#101010",
+                  "width": 12,
+                  "height": 12
+                },
+                {
+                  "type": "text",
+                  "id": "xwSu0",
+                  "name": "Product",
+                  "fill": "#101010",
+                  "content": "OPENCODE GO",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.2
+                },
+                {
+                  "type": "text",
+                  "id": "Xoyjl",
+                  "name": "Divider",
+                  "fill": "#C9C9C9",
+                  "content": "/",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "tiL26",
+                  "name": "Subtitle",
+                  "fill": "#5E5E5E",
+                  "content": "RATE LIMITS",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.8
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "S8iMS",
+              "name": "Stamp",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "iu0Gh",
+                  "name": "LiveDot",
+                  "fill": "#101010",
+                  "width": 7,
+                  "height": 7
+                },
+                {
+                  "type": "text",
+                  "id": "G7yBS",
+                  "name": "Updated",
+                  "fill": "#101010",
+                  "content": "LIVE · 18 NOV · 13:30 UTC",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "f4FRvz",
+          "name": "Rule",
+          "fill": "#101010",
+          "width": "fill_container",
+          "height": 2
+        },
+        {
+          "type": "frame",
+          "id": "k0vteO",
+          "name": "Hero Weekly",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "DKQr3",
+              "name": "Hero Top",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uDbXT",
+                  "name": "Hero Number",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A7JtYb",
+                      "name": "WindowLabel",
+                      "fill": "#5E5E5E",
+                      "content": "WEEKLY WINDOW",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "k57BOn",
+                      "name": "Number Row",
+                      "gap": 6,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WAocB",
+                          "name": "BigValue",
+                          "fill": "#101010",
+                          "content": "45",
+                          "lineHeight": 0.85,
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 88,
+                          "fontWeight": "700",
+                          "letterSpacing": -5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nZimu",
+                          "name": "Pct Stack",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sFsoS",
+                              "name": "Pct",
+                              "fill": "#101010",
+                              "content": "%",
+                              "lineHeight": 0.9,
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 30,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "b6qxXq",
+                              "name": "UsedWord",
+                              "fill": "#5E5E5E",
+                              "content": "USED",
+                              "lineHeight": 1,
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 11,
+                              "fontWeight": "600",
+                              "letterSpacing": 1.8
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mjRIE",
+                  "name": "Hero Facts",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "WIL0h",
+                      "name": "REMAINING",
+                      "layout": "vertical",
+                      "gap": 1,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ISlPF",
+                          "name": "REMAINING Label",
+                          "fill": "#5E5E5E",
+                          "content": "REMAINING",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "QfaAy",
+                          "name": "REMAINING Value",
+                          "fill": "#101010",
+                          "content": "55.0%",
+                          "lineHeight": 1,
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 22,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GaxLv",
+                      "name": "RESETS IN",
+                      "layout": "vertical",
+                      "gap": 1,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pE1oh",
+                          "name": "RESETS IN Label",
+                          "fill": "#5E5E5E",
+                          "content": "RESETS IN",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "ti8rA",
+                          "name": "RESETS IN Value",
+                          "fill": "#101010",
+                          "content": "2d 04h",
+                          "lineHeight": 1,
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 22,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sJnW2",
+              "name": "Ticks",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 3,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "Fmcvw",
+                  "name": "Tick 1",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "DvT8e",
+                  "name": "Tick 2",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "d9WaW",
+                  "name": "Tick 3",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "XiEMc",
+                  "name": "Tick 4",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "bF3AZ",
+                  "name": "Tick 5",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "oL0Kn",
+                  "name": "Tick 6",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "BquxN",
+                  "name": "Tick 7",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "jQJCb",
+                  "name": "Tick 8",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Nt8tY",
+                  "name": "Tick 9",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Ojjav",
+                  "name": "Tick 10",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "UZPGo",
+                  "name": "Tick 11",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "JoFwV",
+                  "name": "Tick 12",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "nOmeb",
+                  "name": "Tick 13",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "SJbRe",
+                  "name": "Tick 14",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "r4iVkU",
+                  "name": "Tick 15",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "w7cHQ2",
+                  "name": "Tick 16",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "gvzt3",
+                  "name": "Tick 17",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "A8N07i",
+                  "name": "Tick 18",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "bUkr4",
+                  "name": "Tick 19",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "fildB",
+                  "name": "Tick 20",
+                  "fill": "#101010",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "zn3Qd",
+                  "name": "Tick 21",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "dOS5f",
+                  "name": "Tick 22",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "p6kDz",
+                  "name": "Tick 23",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "cHk0t",
+                  "name": "Tick 24",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "pUe3p",
+                  "name": "Tick 25",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "L9FSjK",
+                  "name": "Tick 26",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "z2qYG",
+                  "name": "Tick 27",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "WahrR",
+                  "name": "Tick 28",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "lUcOK",
+                  "name": "Tick 29",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "n5WttR",
+                  "name": "Tick 30",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "BUaMQ",
+                  "name": "Tick 31",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "LmYv7",
+                  "name": "Tick 32",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "iT7Aw",
+                  "name": "Tick 33",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "VhWOA",
+                  "name": "Tick 34",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "yT6e9",
+                  "name": "Tick 35",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "E85lyb",
+                  "name": "Tick 36",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "S7ZZu",
+                  "name": "Tick 37",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "gZoz4",
+                  "name": "Tick 38",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "TxKPv",
+                  "name": "Tick 39",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "WFBjx",
+                  "name": "Tick 40",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "oOCkv",
+                  "name": "Tick 41",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "P0pHXG",
+                  "name": "Tick 42",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "f2xqb",
+                  "name": "Tick 43",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Kqq45",
+                  "name": "Tick 44",
+                  "fill": "#E5E5E5",
+                  "width": "fill_container",
+                  "height": "fill_container"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bnpxd",
+              "name": "Bar Meta",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pCpWk",
+                  "name": "ScaleStart",
+                  "fill": "#5E5E5E",
+                  "content": "0",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 10,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "qlvUy",
+                  "name": "ScaleMid",
+                  "fill": "#3A3A3A",
+                  "content": "weekly 45% · 20 of 44 units",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 10,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "ya2i3",
+                  "name": "ScaleEnd",
+                  "fill": "#5E5E5E",
+                  "content": "100",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 10,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "rrftC",
+          "name": "Rule",
+          "fill": "#E5E5E5",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "zndef",
+          "name": "Secondary Windows",
+          "width": "fill_container",
+          "gap": 28,
+          "children": [
+            {
+              "type": "frame",
+              "id": "CX4eb",
+              "name": "5-HOUR",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "yqY7M",
+                  "name": "5-HOUR Row",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TNBmt",
+                      "name": "5-HOUR Label",
+                      "fill": "#101010",
+                      "content": "5-HOUR",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "letterSpacing": 1.6
+                    },
+                    {
+                      "type": "text",
+                      "id": "TgZZT",
+                      "name": "5-HOUR Used",
+                      "fill": "#101010",
+                      "content": "12%",
+                      "lineHeight": 1,
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 26,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V0TeAo",
+                  "name": "Ticks",
+                  "width": "fill_container",
+                  "height": 12,
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "I5zEs",
+                      "name": "Tick 1",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "KbjUZ",
+                      "name": "Tick 2",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "ioCO6",
+                      "name": "Tick 3",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "qH9Mw",
+                      "name": "Tick 4",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "YwLHs",
+                      "name": "Tick 5",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "cdG6r",
+                      "name": "Tick 6",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "gqPmC",
+                      "name": "Tick 7",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "SEKeu",
+                      "name": "Tick 8",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "WrgZm",
+                      "name": "Tick 9",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "hyX4q",
+                      "name": "Tick 10",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "Faa4o",
+                      "name": "Tick 11",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "U6Xcwu",
+                      "name": "Tick 12",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "R6b8R4",
+                      "name": "Tick 13",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "QRLxD",
+                      "name": "Tick 14",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "Hy9YL",
+                      "name": "Tick 15",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "e8KAjb",
+                      "name": "Tick 16",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "R9kduW",
+                      "name": "Tick 17",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "F0k8O",
+                      "name": "Tick 18",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "hAvrH",
+                      "name": "Tick 19",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "rOUFO",
+                      "name": "Tick 20",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "Q4Ons0",
+                      "name": "Tick 21",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "vjKJZ",
+                      "name": "Tick 22",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "G0KYI",
+                      "name": "Tick 23",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "kID8v",
+                      "name": "Tick 24",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "mnJQA",
+                      "name": "Tick 25",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "n44Jd5",
+                      "name": "Tick 26",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kEh57",
+                  "name": "5-HOUR Meta",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "c9ypj",
+                      "name": "5-HOUR Left",
+                      "fill": "#101010",
+                      "content": "88% left",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Y8LjJT",
+                      "name": "5-HOUR Reset",
+                      "fill": "#5E5E5E",
+                      "content": "resets 3h 10m",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "BSqhX",
+              "name": "Col Divider",
+              "fill": "#D6D6D6",
+              "width": 1,
+              "height": 74
+            },
+            {
+              "type": "frame",
+              "id": "qNyAe",
+              "name": "MONTHLY",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "z1WYO",
+                  "name": "MONTHLY Row",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OXJY6",
+                      "name": "MONTHLY Label",
+                      "fill": "#101010",
+                      "content": "MONTHLY",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "letterSpacing": 1.6
+                    },
+                    {
+                      "type": "text",
+                      "id": "E6HMF",
+                      "name": "MONTHLY Used",
+                      "fill": "#101010",
+                      "content": "64%",
+                      "lineHeight": 1,
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 26,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PGDF6",
+                  "name": "Ticks",
+                  "width": "fill_container",
+                  "height": 12,
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "GmzOo",
+                      "name": "Tick 1",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "IILSs",
+                      "name": "Tick 2",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "dh3j5",
+                      "name": "Tick 3",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "fr7Dn",
+                      "name": "Tick 4",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "UKbo9",
+                      "name": "Tick 5",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "QKQOO",
+                      "name": "Tick 6",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "X62sP",
+                      "name": "Tick 7",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "t1cqie",
+                      "name": "Tick 8",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "PmJCr",
+                      "name": "Tick 9",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "yoD9W",
+                      "name": "Tick 10",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "ffhUw",
+                      "name": "Tick 11",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "vWYk7",
+                      "name": "Tick 12",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "EnpDh",
+                      "name": "Tick 13",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "MGlBT",
+                      "name": "Tick 14",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "GXGn5",
+                      "name": "Tick 15",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "NIHRO",
+                      "name": "Tick 16",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "YgE0a",
+                      "name": "Tick 17",
+                      "fill": "#101010",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "nwXfS",
+                      "name": "Tick 18",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "T9LhOE",
+                      "name": "Tick 19",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "LpjnZ",
+                      "name": "Tick 20",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "cyG0T",
+                      "name": "Tick 21",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "jvwHb",
+                      "name": "Tick 22",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "ReZKV",
+                      "name": "Tick 23",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "U5oN1",
+                      "name": "Tick 24",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "qIYhz",
+                      "name": "Tick 25",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "O3ulXv",
+                      "name": "Tick 26",
+                      "fill": "#E5E5E5",
+                      "width": "fill_container",
+                      "height": "fill_container"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UgOcS",
+                  "name": "MONTHLY Meta",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MUegU",
+                      "name": "MONTHLY Left",
+                      "fill": "#101010",
+                      "content": "36% left",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kteOC",
+                      "name": "MONTHLY Reset",
+                      "fill": "#5E5E5E",
+                      "content": "resets 12d 03h",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SqTjA",
+          "name": "Forecast Band",
+          "width": "fill_container",
+          "fill": "#101010",
+          "gap": 24,
+          "padding": [
+            14,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "g1AE8i",
+              "name": "Forecast Copy",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "f98lJk",
+                  "name": "Forecast Label",
+                  "fill": "#9C9C9C",
+                  "content": "FORECAST",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 10,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "m3IY2",
+                  "name": "Forecast Text",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "At this pace the weekly window is exhausted Thu 14:20, 26h before reset.",
+                  "lineHeight": 1.3,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "H0C5V",
+              "name": "Pace",
+              "layout": "vertical",
+              "gap": 2,
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "etg5Q",
+                  "name": "Pace Label",
+                  "fill": "#9C9C9C",
+                  "content": "PACE",
+                  "lineHeight": 1,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 10,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "nD3za",
+                  "name": "Pace Value",
+                  "fill": "#FFFFFF",
+                  "content": "1.3x",
+                  "lineHeight": 0.95,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 34,
+                  "fontWeight": "700",
+                  "letterSpacing": -2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "D4zfh",
+          "name": "Rule",
+          "fill": "#E5E5E5",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "q5RLvz",
+          "name": "Footer",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "lsww2",
+              "name": "FootLeft",
+              "fill": "#5E5E5E",
+              "content": "SOURCE OPENCODE.CC/GO",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 10,
+              "fontWeight": "600",
+              "letterSpacing": 1.4
+            },
+            {
+              "type": "text",
+              "id": "O9StG",
+              "name": "FootRight",
+              "fill": "#5E5E5E",
+              "content": "TRMNL OG · 800×480 · SYNC VIA WEBHOOK",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 10,
+              "fontWeight": "600",
+              "letterSpacing": 1.4
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileToken": "c4508a17-2ce5-4ccf-852e-3774ee9533ba"
+}

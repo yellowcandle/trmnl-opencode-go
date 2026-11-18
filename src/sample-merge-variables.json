@@ -1,0 +1,25 @@
+{
+  "workspace": {
+    "id": "wrk_example",
+    "name": "Default",
+    "usage_url": "https://opencode.ai/console/wrk_example/activity/overview"
+  },
+  "go": {
+    "available": true,
+    "windows": [
+      {"key": "rolling", "label": "5 hour", "percent": 12.0, "remaining_percent": 88.0, "limited": false, "resets_at": "2026-11-18T15:10:00Z", "resets_at_ms": 1795007400000, "resets_in": "3h 10m", "status": "ok"},
+      {"key": "weekly", "label": "Weekly", "percent": 45.0, "remaining_percent": 55.0, "limited": false, "resets_at": "2026-11-23T00:00:00Z", "resets_at_ms": 1795392000000, "resets_in": "4d 14h", "status": "ok"},
+      {"key": "monthly", "label": "Monthly", "percent": 64.0, "remaining_percent": 36.0, "limited": false, "resets_at": "2026-12-12T08:44:07Z", "resets_at_ms": 1797065047000, "resets_in": "24d 8h", "status": "ok"}
+    ],
+    "rolling": {"key": "rolling", "label": "5 hour", "percent": 12.0, "remaining_percent": 88.0, "limited": false, "resets_at": "2026-11-18T15:10:00Z", "resets_at_ms": 1795007400000, "resets_in": "3h 10m", "status": "ok"},
+    "weekly": {"key": "weekly", "label": "Weekly", "percent": 45.0, "remaining_percent": 55.0, "limited": false, "resets_at": "2026-11-23T00:00:00Z", "resets_at_ms": 1795392000000, "resets_in": "4d 14h", "status": "ok"},
+    "monthly": {"key": "monthly", "label": "Monthly", "percent": 64.0, "remaining_percent": 36.0, "limited": false, "resets_at": "2026-12-12T08:44:07Z", "resets_at_ms": 1797065047000, "resets_in": "24d 8h", "status": "ok"},
+    "any_limited": false,
+    "max_percent": 64.0
+  },
+  "budgets": [],
+  "updated_at": "2026-11-18T10:00:00Z",
+  "source": "opencode-api",
+  "status": "ok",
+  "error": null
+}
